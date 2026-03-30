@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Review Hub</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-title">Movie Review Hub</div>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <main class="container">
+    <!-- Featured Movies Section -->
+    <section class="movies-section">
+      <h2 class="section-title">Popular Movies</h2>
+      <div class="search-bar" role="search">
+        <input
+          id="movie-search-input"
+          type="text"
+          placeholder="Search movies by title"
+          autocomplete="off"
+        />
+        <button id="movie-search-button" class="btn-search" type="button">
+          Search
+        </button>
+      </div>
+      <p id="movie-search-status" class="search-status"></p>
+      <div class="movies-grid" id="featured-movies-grid"></div>
+    </section>
+  </main>
+
+  <!-- Movie Details Modal -->
+  <div
+    id="movie-details-modal"
+    class="modal-overlay"
+    hidden
+    aria-hidden="true"
+  >
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Movie details">
+      <button
+        id="movie-details-close"
+        class="modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        Close
+      </button>
+
+      <div class="movie-details-content">
+        <img
+          id="movie-details-poster"
+          class="movie-poster movie-details-poster"
+          alt=""
+        />
+        <div class="movie-details-meta" id="movie-details-meta"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
